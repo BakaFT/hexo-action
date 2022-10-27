@@ -12,10 +12,16 @@ ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts
 git config --global user.name "$INPUT_USER_NAME"
 git config --global user.email "$INPUT_USER_EMAIL"
 
+# install lint-md
+npm i -g @lint-md/cli
+
 # install hexo env
 npm install hexo-cli -g
 npm install hexo-deployer-git --save
 npm install --save hexo-pagination@^2.0.0
+
+# linting
+lint-md -f ./source/_posts/*.md -c ./.lintmdrc
 
 # deployment
 if [ "$INPUT_COMMIT_MSG" = "none" ]
