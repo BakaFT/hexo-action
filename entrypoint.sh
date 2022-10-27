@@ -21,7 +21,7 @@ npm install hexo-deployer-git --save
 npm install --save hexo-pagination@^2.0.0
 
 # linting
-lint-md -f./source/_posts/*.md -c ./.lintmdrc
+lint-md -f ./source/_posts/*.md -c ./.lintmdrc
 
 # deployment
 if [ "$INPUT_COMMIT_MSG" = "none" ]
