@@ -13,7 +13,7 @@ git config --global user.name "$INPUT_USER_NAME"
 git config --global user.email "$INPUT_USER_EMAIL"
 
 # install lint-md
-npm i -g @lint-md/cli
+npm i -g @lint-md/cli@0.1.8
 
 # install hexo env
 npm install hexo-cli -g
